@@ -3,7 +3,13 @@
 ---
 Se aprovisiona una máquina en skytap haciendo uso de la plantilla de _Jenkins v2.121.3 on Ubuntu 16.04.5 LTS Desktop-Firstboot_ la cual tiene instalada la versión _2.121.3_ de la herramienta de integración contínua _Jenkins_. 
 
-### 1.Conexión ssh
+### 1.Creación del proyecto
+Ingrese a la interfaz de jenkins mediante la IP o el DNS de la máquina por el puerto 8080, las credenciales las encontrará en skytap, en la sección VM settings -> credentials.
+Un vez ingrese sus credenciales seleccione _crear nueva tarea_ para crear un _proyecto libre_. Es importante que configure el origen del código fuente, para esto, seleccionamos _git_ y en el campo _Repository URL_ ingresamos la [dirección de nuestro repositorio](https://github.com/mayi29/js-jenkis).
+
+### 3.Plugin de SSH
+
+### 4.Conexión SSH con la máquina de producción
 Se debe crear una clave SSH con el propósito de facilitar los inicios de sesión automatizados y sin contraseña entre ambas máquinas. Para generar la clave ssh utilice el sieguiente comando:
 ```sh
 ssh-keygen
